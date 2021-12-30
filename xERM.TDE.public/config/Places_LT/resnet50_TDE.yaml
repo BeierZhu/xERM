@@ -1,0 +1,42 @@
+# default num_head = 2
+criterions:
+  PerformanceLoss:
+    def_file: ./loss/SoftmaxLoss.py
+    loss_params: {}
+    optim_params: null
+    weight: 1.0
+last: false
+# apply incremental pca to remove main components
+apply_ipca: false
+num_components: 512
+model_dir: null
+tuning_memory: false
+networks:
+  classifier:
+    def_file: ./models/CausalNormClassifier.py
+    optim_params: {lr: 0.1, momentum: 0.9, weight_decay: 0.0005}
+    scheduler_params: {coslr: false, warmup: false, endlr: 0.0, gamma: 0.1, step_size: 10}
+    params: {dataset: Places_LT, feat_dim: 512, num_classes: 365, stage1_weights: false, use_effect: true, num_head: 1, tau: 16.0, alpha: 2, gamma: 0.03125}
+  feat_model:
+    def_file: ./models/ResNet50Feature.py
+    fix: false
+    optim_params: {lr: 0.001, momentum: 0.9, weight_decay: 0.0005}
+    scheduler_params: {coslr: false, warmup: false, endlr: 0.0, gamma: 0.1, step_size: 10}
+    params: {dataset: Places_LT, dropout: null, stage1_weights: false, use_fc: true}
+shuffle: false
+training_opt:
+  backbone: resnet50
+  batch_size: 256
+  dataset: Places_LT
+  display_step: 10
+  display_grad: False
+  display_grad_step: 10
+  feature_dim: 512
+  log_dir: ./logs/Places_LT/models/resnet50_e30
+  log_root: /logs/Places_LT
+  num_classes: 365
+  num_epochs: 30
+  num_workers: 12
+  open_threshold: 0.1
+  sampler: null
+  sub_dir: models

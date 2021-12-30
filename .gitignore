@@ -1,2 +1,5 @@
 xERM.PC.public/exp_results
 *.pyc
+xERM.TDE.public/logs/
+xERM.TDE.public/__pycache__/
+xERM.TDE.public/models/__pycache__/
