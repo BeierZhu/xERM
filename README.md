@@ -12,7 +12,7 @@ i.e., protect the model training from being neither too “head biased” nor to
 The codes are organized into three folders:
 
 1. [xERM.PC.public](xERM.PC.public) uses Post-Compensated Softmax ([PC](https://arxiv.org/abs/2012.00321)) as balanced model to implement xERM.
-2. xERM.TDE.public uses Total Direct Effect ([TDE](https://arxiv.org/abs/2009.12991)) as balanced model to implement xERM.
+2. [xERM.TDE.public](xERM.TDE.public) uses Total Direct Effect ([TDE](https://arxiv.org/abs/2009.12991)) as balanced model to implement xERM.
 3. xERM.RIDE.public uses [RIDE](https://arxiv.org/abs/2010.01809) as balanced model to implement xERM.
 
 ## Citation
