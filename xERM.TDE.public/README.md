@@ -11,6 +11,8 @@ Please refer to [TDE](https://github.com/KaihuaTang/Long-Tailed-Recognition.pyto
 ## Places365-LT
 Please change the ```resnet50 = load_model(resnet50, pretrain='/data1/pretrained/resnet50-0676ba61.pth')``` in ```models/ResNet50Feature.py``` to your resnet50 pretrained model path.
 
+Please change the ResNet152 pretrained model path in ```models/ResNet152Feature.py```
+
 ## ResNet50
 
 Step 1: Train TDE model
@@ -28,6 +30,25 @@ python main.py --cfg ./config/Places_LT/resnet50_xERM.yaml --gpu 0,1,2,3 --xERM
 Step 3: Evaluate
 ```
 python main.py --cfg ./config/Places_LT/resnet50_xERM.yaml --gpu 0,1,2,3 --xERM --test
+```
+
+## ResNet152
+
+Step 1: Train TDE model
+
+```
+python main.py --cfg ./config/Places_LT/resnet152_TDE.yaml --gpu 0,1,2,3
+``` 
+
+Step 2: Train xERM-TDE model
+
+```
+python main.py --cfg ./config/Places_LT/resnet152_xERM.yaml --gpu 0,1,2,3 --xERM
+```
+
+Step 3: Evaluate
+```
+python main.py --cfg ./config/Places_LT/resnet152_xERM.yaml --gpu 0,1,2,3 --xERM --test
 ```
 
 ## Citation
