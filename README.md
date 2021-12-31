@@ -31,3 +31,4 @@ If you find our paper or this project helps your research, please kindly conside
 ## Update Logs
 - 28 Dec 2021, Release train and eval code of xERM-PC on CIFAR100-LT and ImageNet-LT Dataset. 
 - 30 Dec 2021, Release train and eval code of xERM-TDE on Places365-LT Dataset (ResNet50 Backbone). 
+- 31 Dec 2021, Release train and eval code of xERM-TDE on Places365-LT Dataset (ResNet152 Backbone). 
