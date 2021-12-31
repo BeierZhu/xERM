@@ -1,7 +1,7 @@
 # [AAAI22] Cross-Domain Empirical Risk Minimization for Unbiased Long-tailed Classification
 
 We point out the overlooked unbiasedness in long-tailed classification: models should perform well on both imbalanced and balanced test distributions.
-To tackle this challenge, we propose a novel training paradigm called Cross-Domain Empirical Risk Minimization (xERM).
+To tackle this challenge, we propose a novel training paradigm called [Cross-Domain Empirical Risk Minimization (xERM)](https://arxiv.org/pdf/2112.14380.pdf).
 xERM consists of two ERM terms, which are the cross-entropy losses with different supervisions: 
 one is the ground-truth label from the seen imbalanced domain, and the other is the prediction of a balanced model. 
 The imbalanced domain empirical risk encourages the model to learn from the ground-truth annotations from the imbalanced distribution, 
