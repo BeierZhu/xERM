@@ -3,3 +3,6 @@ xERM.PC.public/exp_results
 xERM.TDE.public/logs/
 xERM.TDE.public/__pycache__/
 xERM.TDE.public/models/__pycache__/
+xERM.RIDE.public/saved/*
+xERM.RIDE.public/__pycache__/
+xERM.RIDE.public/data/*
